@@ -1,7 +1,6 @@
 class Solution {
 
     public int minDepth(TreeNode root) {
-
         return dfs(root);       
     }
 
