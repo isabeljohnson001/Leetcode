@@ -23,4 +23,5 @@ class MovingAverage {
  * double param_1 = obj.next(val);
  */
 
+
  
