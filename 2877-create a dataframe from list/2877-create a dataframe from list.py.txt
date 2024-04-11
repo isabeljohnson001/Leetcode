@@ -1,0 +1,7 @@
+import pandas as pd
+
+def createDataframe(student_data: List[List[int]]):
+    #d={'student_id':[1,2,3,4],'age':[15,11,11,20]}
+    #df=pd.DataFrame(d);    
+    df=pd.DataFrame(student_data,columns=['student_id','age'])
+    return df
