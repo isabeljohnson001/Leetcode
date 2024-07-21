@@ -18,3 +18,5 @@ class Solution(object):
             if target>num:
                 left=mid+1
         return -1
+
+        
