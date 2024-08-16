@@ -19,3 +19,4 @@ class Solution(object):
                 left=mid+1
         return -1
 
+        
