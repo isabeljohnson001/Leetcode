@@ -4,7 +4,6 @@ class Solution(object):
         :type nums: List[int]
         :type target: int
         :rtype: int
-        
         """
         mid=0
         left=0
@@ -20,4 +19,3 @@ class Solution(object):
                 left=mid+1
         return -1
 
-        
