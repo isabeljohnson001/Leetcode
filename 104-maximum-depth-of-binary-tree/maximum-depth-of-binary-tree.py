@@ -9,7 +9,25 @@ class Solution:
         if not root:
             return 0
         
-        left=self.maxDepth(root.left)
-        right=self.maxDepth(root.right)
+        #left=self.maxDepth(root.left)
+        #right=self.maxDepth(root.right)
         
-        return max(right,left)+1
+        #return max(right,left)+1
+
+
+#if using bfs
+        level=0
+        q=deque([root])
+        while q:
+            for i in range(len(q)):
+                node=q.popleft()
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            level+=1
+        return level
+
+
+
+
