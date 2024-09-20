@@ -12,7 +12,7 @@ class Solution:
 
         for i in range(n):
             for j in range(i+1,n):
-                if isConnected[i][j]:
+                if isConnected[i][j]==1:
                     graph[i].append(j)
                     graph[j].append(i)
         
