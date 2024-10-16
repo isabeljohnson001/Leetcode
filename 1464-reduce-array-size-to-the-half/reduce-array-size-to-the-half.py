@@ -6,17 +6,20 @@ class Solution:
         counts=Counter(arr)
         target=len(arr)/2
         ans=set()
-        sorted_counts=sorted(counts.items(),key=lambda x:x[1],reverse=True)
-        removed_count=0
+        #sorted_counts=sorted(counts.items(),key=lambda x:x[1],reverse=True)
         
-        for num, freq in sorted_counts:
+        heap=[]
+        for item,freq in counts.items():
+            heapq.heappush(heap,[-freq,item])
+        
+        removed_count=0
+        while heap:
+            freq,num=heapq.heappop(heap)
             ans.add(num)
-            removed_count+=freq
+            removed_count+=(-1*freq)
 
             if removed_count>=len(arr)//2:
                 break
-        
-        
         
         return len(ans)
 
