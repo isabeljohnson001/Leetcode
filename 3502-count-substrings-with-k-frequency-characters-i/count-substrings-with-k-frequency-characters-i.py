@@ -38,15 +38,16 @@ class Solution:
                     res+=n-right
         return res
         '''
-        ans = 0
-        l = 0
-        d = {}
+
+        ans=0
+        l=0
+        freq={}
         for c in s:
-            d[c] = d.get(c, 0) + 1
-            while d[c] == k:
-                d[s[l]] -= 1
-                l += 1
-            ans += l
+            freq[c]=freq.get(c,0)+1
+            while freq[c]==k:
+                freq[s[l]]-=1
+                l=l+1
+            ans+=l
         return ans
 
 
