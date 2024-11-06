@@ -9,10 +9,10 @@ class Solution(object):
             return nums
         n=len(nums);
         windowSize=2*k+1;
-        #averages=[]
-        #for i in range(0,n):
-        #    averages.append(-1)
-        averages=[-1]*n
+        averages=[]
+        for i in range(0,n):
+            averages.append(-1)
+        #averages=[-1]*n
         prefix=[]
         if(windowSize>n):
             return averages
