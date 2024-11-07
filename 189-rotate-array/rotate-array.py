@@ -3,15 +3,18 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+        def reverse(start, end):
+            while start<end:
+                nums[start],nums[end]=nums[end],nums[start]
+                start+=1
+                end-=1
         n=len(nums)
-        res=[0]*n
-        startIndex=k
-
-        for i in range(n):
-                startIndex=(i+k)%n
-                res[startIndex]=nums[i]
-        nums[:]=res
+        k = k % n 
+        reverse(0,n-1)
+        reverse(0,k-1)
+        reverse(k,n-1)
         return nums
+
 
 
             
