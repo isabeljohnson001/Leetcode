@@ -4,11 +4,9 @@ class Solution:
         nums1.sort()
         nums2.sort()
         i,j=0,0
-        #intersection=set()
         res=[]
         while i<len(nums1) and j<len(nums2):
             if nums1[i]==nums2[j]:
-                #intersection.add(nums1[i])
                 res.append(nums1[i])
                 i+=1
                 j+=1
@@ -16,8 +14,6 @@ class Solution:
                 i+=1
             else:
                 j+=1
-        #for i in intersection:
-        #    res.append(i)
         return res
 
         
