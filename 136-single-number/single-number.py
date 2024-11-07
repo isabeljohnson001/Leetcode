@@ -1,6 +1,9 @@
 from collections import Counter
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        counts=Counter(nums)
-        return next(num for num, count in counts.items() if count==1)
+        a=0
+        for i in nums:
+            a^=i
+        return a
+
         
