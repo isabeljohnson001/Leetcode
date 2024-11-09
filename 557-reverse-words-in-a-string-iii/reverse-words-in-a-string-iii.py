@@ -1,17 +1,20 @@
-class Solution(object):
-    def reverseWords(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
-        arr=s.split(' ')
-        for i in range(len(arr)):
-            curr_word=list(arr[i])
-            left,right=0,len(curr_word)-1
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        ans=[]
+        def reverse(word):
+            word_list=list(word)
+            left=0
+            right=len(word_list)-1
             while left<right:
-                curr_word[left],curr_word[right]=curr_word[right],curr_word[left]
+                word_list[left],word_list[right]=word_list[right],word_list[left]
                 left+=1
                 right-=1
-            arr[i]=''.join(curr_word)
-        return ' '.join(arr)
-            
+            return "".join(word_list)
+
+        words=s.split(' ')
+        for item in words:
+            ans.append(reverse(item))
+        return " ".join(ans)
+
+
+        
