@@ -5,7 +5,6 @@ class Solution:
         left=0
         right=len(s_list)-1
         while(left<right):
-            #if s_list not in ('\\','\\'')
             while left<right and not s[left].isalpha():
                 left+=1
             while left<right and not s[right].isalpha():
