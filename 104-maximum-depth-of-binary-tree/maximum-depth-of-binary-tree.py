@@ -9,6 +9,11 @@ class Solution:
         if not root:
             return 0
         
+        else: 
+            left=self.maxDepth(root.left)
+            right=self.maxDepth(root.right)
+
+            return max(left,right)+1
         #left=self.maxDepth(root.left)
         #right=self.maxDepth(root.right)
         
@@ -30,6 +35,7 @@ class Solution:
 
 
         #usibg DFS stack
+        '''
         res=0
         stack=[[root,1]]
         while stack:
@@ -39,8 +45,9 @@ class Solution:
                 stack.append([node.left,depth+1])
                 stack.append([node.right,depth+1])
         return res
-            
+        '''
 
+        
 
 
 
