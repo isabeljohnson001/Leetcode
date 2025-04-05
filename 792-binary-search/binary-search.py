@@ -7,7 +7,7 @@ class Solution(object):
         """
         mid=0
         left=0
-        right=len(nums)-1
+        right=len(nums)-1   
         while(left<=right):
             mid=(left+right)/2
             num=nums[mid]
